@@ -134,10 +134,11 @@ useEffect(() => {
     try {
       setLoadingBackendData(true);
 
-      const response = await fetch(
-        "http://localhost:5000/api/problems"
-      );
-
+    
+     const response = await fetch(
+  "https://govcatalyst-backend.onrender.com/api/problems"
+);
+      
       if (!response.ok) {
         throw new Error("Failed to load challenges.");
       }
@@ -352,10 +353,10 @@ const createChallenge = async (e) => {
   }
 
   try {
-    const response = await fetch("http://localhost:5000/api/problems", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+   const response = await fetch("https://govcatalyst-backend.onrender.com/api/problems", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
       },
       body: JSON.stringify({
         title: challengeForm.title.trim(),
@@ -1128,10 +1129,9 @@ const startMatching = async () => {
     setRecommendedStartup(null);
 
     const problemId = selectedMatchingChallenge.id;
-
-    const runResponse = await fetch(
-      `http://localhost:5000/api/matches/run/${problemId}`,
-      {
+const runResponse = await fetch(
+  `https://govcatalyst-backend.onrender.com/api/matches/run/${problemId}`,
+  {
         method: "POST",
        headers: {
   "Content-Type": "application/json",
@@ -1151,8 +1151,8 @@ const startMatching = async () => {
     await runResponse.json();
 
     const resultsResponse = await fetch(
-      `http://localhost:5000/api/matches/problem/${problemId}`
-    );
+  `https://govcatalyst-backend.onrender.com/api/matches/problem/${problemId}`
+);
 
     if (!resultsResponse.ok) {
       throw new Error(
