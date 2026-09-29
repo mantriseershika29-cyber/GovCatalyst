@@ -1,0 +1,1696 @@
+/* =========================================================
+   GOVCATALYST — APP.CSS
+   ========================================================= */
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   LOGIN / REGISTER MAIN PAGE
+========================================================= */
+
+.gov-home {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #2d5fc7;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   BACKGROUND SHAPES
+========================================================= */
+
+.orange-shape {
+  position: absolute;
+  width: 820px;
+  height: 820px;
+  right: -130px;
+  top: -300px;
+  background: #f6a008;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.green-shape {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: -260px;
+  bottom: -340px;
+  background: #8bc63f;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.white-curve {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  right: -330px;
+  top: 300px;
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   GOVCATALYST TOP BRAND
+========================================================= */
+
+.gov-topbar {
+  width: 100%;
+  height: 68px;
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 20;
+  padding: 8px 20px;
+}
+
+.gov-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.gov-brand strong {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.6px;
+}
+
+.gov-brand span {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: white;
+}
+
+
+/* =========================================================
+   MAIN LOGIN / REGISTER CONTENT
+========================================================= */
+
+.gov-content {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 45px;
+  padding: 5px 7vw 8px;
+  position: relative;
+  z-index: 5;
+}
+
+
+/* =========================================================
+   LEFT INTRODUCTION
+========================================================= */
+
+.gov-intro {
+  width: 100%;
+  max-width: 650px;
+  justify-self: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.official-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.gov-intro h1 {
+  font-size: clamp(43px, 4.4vw, 66px);
+  line-height: 0.98;
+  font-weight: 700;
+  letter-spacing: -2.5px;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.gov-intro h1 strong {
+  font-weight: 800;
+}
+
+.gov-intro p {
+  max-width: 650px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: white;
+}
+
+
+/* =========================================================
+   LOGIN / REGISTER CARD
+========================================================= */
+
+.login-box {
+  width: min(100%, 470px);
+  max-height: calc(100vh - 85px);
+  justify-self: center;
+  background: rgba(255, 255, 255, 0.98);
+  color: #111827;
+  border-radius: 19px;
+  padding: 18px 32px 14px;
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.18);
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LOGIN / REGISTER HEADER
+========================================================= */
+
+.login-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.login-header h2 {
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #132238;
+  margin-bottom: 3px;
+}
+
+.login-header p {
+  font-size: 10px;
+  color: #64748b;
+}
+
+
+/* =========================================================
+   WELCOME / CREATE ACCOUNT TITLE
+========================================================= */
+
+.login-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-title h1 {
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 800;
+  font-style: italic;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.login-title p {
+  font-size: 11px;
+  color: #64748b;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+.form-group label,
+.captcha-section > label {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.form-group input,
+.captcha-input {
+  width: 100%;
+  height: 39px;
+  border: 1px solid #d4dae3;
+  border-radius: 8px;
+  background: #f5f6f8;
+  padding: 0 13px;
+  font-size: 12px;
+  color: #111827;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-group input::placeholder,
+.captcha-input::placeholder {
+  color: #94a3b8;
+  opacity: 1;
+}
+
+.form-group input:focus,
+.captcha-input:focus {
+  border-color: #2d5fc7;
+  background: white;
+  box-shadow:
+    0 0 0 3px rgba(45, 95, 199, 0.1);
+}
+
+
+/* =========================================================
+   RED VALIDATION ERROR
+========================================================= */
+
+.field-error {
+  margin-top: 3px;
+  padding-left: 2px;
+  color: #dc2626;
+  font-size: 9px;
+  line-height: 1.2;
+  font-weight: 500;
+  text-transform: lowercase;
+  text-align: left;
+}
+
+.captcha-field-error {
+  text-align: left;
+  padding-left: 2px;
+  margin-top: 3px;
+}
+
+
+/* =========================================================
+   PASSWORD REQUIREMENT
+========================================================= */
+
+.password-hint {
+  width: 100%;
+  margin-top: -1px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.password-hint span {
+  font-size: 8px;
+  line-height: 1.2;
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   CAPTCHA
+========================================================= */
+
+.captcha-section {
+  width: 100%;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+.captcha-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.captcha-image {
+  flex: 1;
+  height: 42px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #cfd4dc;
+  border-radius: 7px;
+  background: #e8e9eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   CAPTCHA CHARACTERS
+========================================================= */
+
+.captcha-char {
+  position: relative;
+  z-index: 4;
+  display: inline-block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 1px;
+}
+
+.char-one {
+  transform: rotate(-10deg) translateY(2px);
+}
+
+.char-two {
+  transform: rotate(8deg) translateY(-2px);
+}
+
+.char-three {
+  transform: rotate(-5deg) translateY(2px);
+}
+
+.char-four {
+  transform: rotate(11deg) translateY(-2px);
+}
+
+.char-five {
+  transform: rotate(-8deg) translateY(1px);
+}
+
+
+/* =========================================================
+   CAPTCHA LINES
+========================================================= */
+
+.captcha-line {
+  position: absolute;
+  width: 120%;
+  height: 2px;
+  background: #777;
+  opacity: 0.6;
+  z-index: 3;
+}
+
+.line-one {
+  transform: rotate(12deg);
+}
+
+.line-two {
+  transform: rotate(-9deg);
+}
+
+.line-three {
+  transform: rotate(3deg);
+}
+
+
+/* =========================================================
+   CAPTCHA DOTS
+========================================================= */
+
+.captcha-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #777;
+  z-index: 5;
+}
+
+.dot-one {
+  top: 8px;
+  left: 35px;
+}
+
+.dot-two {
+  bottom: 7px;
+  left: 100px;
+}
+
+.dot-three {
+  top: 10px;
+  right: 85px;
+}
+
+.dot-four {
+  bottom: 7px;
+  right: 35px;
+}
+
+
+/* =========================================================
+   CAPTCHA REFRESH
+========================================================= */
+
+.captcha-refresh {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 8px;
+  background: #2d5fc7;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+.captcha-refresh:hover {
+  background: #214da9;
+  transform: rotate(15deg);
+}
+
+
+/* =========================================================
+   LOGIN OPTIONS
+========================================================= */
+
+.login-options {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6px 0 8px;
+  font-size: 10px;
+  color: #475569;
+}
+
+.login-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.login-options input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+  accent-color: #2d5fc7;
+}
+
+.forgot-btn {
+  border: none;
+  background: transparent;
+  color: #2457bd;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.forgot-btn:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   LOGIN / CREATE ACCOUNT BUTTON
+========================================================= */
+
+.login-btn {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: #2d5fc7;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #214da9;
+  transform: translateY(-1px);
+  box-shadow:
+    0 8px 18px rgba(45, 95, 199, 0.25);
+}
+
+
+/* =========================================================
+   CREATE ACCOUNT / LOGIN LINK
+========================================================= */
+
+.create-account {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 7px;
+  font-size: 10px;
+  color: #64748b;
+}
+
+.create-account-btn {
+  border: none;
+  background: transparent;
+  color: #2d5fc7;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 0;
+}
+
+.create-account-btn:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   LOGIN FOOTER
+========================================================= */
+
+.login-footer {
+  text-align: center;
+  font-size: 8px;
+  color: #94a3b8;
+  margin-top: 6px;
+}
+
+
+/* =========================================================
+   PAGE FOOTER
+========================================================= */
+
+.gov-footer {
+  width: 100%;
+  height: 25px;
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.82);
+  position: relative;
+  z-index: 20;
+}
+
+
+/* =========================================================
+   REGISTER PAGE
+========================================================= */
+
+.register-box {
+  max-height: calc(100vh - 75px);
+}
+
+.register-box .form-group {
+  margin-bottom: 4px;
+}
+
+.register-box .login-header {
+  margin-bottom: 5px;
+}
+
+.register-box .login-title {
+  margin-bottom: 6px;
+}
+
+.register-box .captcha-section {
+  margin-top: 2px;
+}
+
+.register-box .login-btn {
+  margin-top: 2px;
+}
+
+
+/* =========================================================
+   PORTAL SELECTION
+========================================================= */
+
+.portal-selection {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #172033;
+  display: flex;
+  flex-direction: column;
+}
+
+.selection-header {
+  width: 100%;
+  height: 70px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 28px;
+  font-weight: 800;
+  color: #172033;
+}
+
+.selection-content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.selection-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  color: #2d5fc7;
+  margin-bottom: 10px;
+}
+
+.selection-content h1 {
+  font-size: 46px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.selection-content h1 em {
+  color: #2d5fc7;
+  font-style: italic;
+}
+
+.selection-content > p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+
+/* =========================================================
+   PORTAL CARDS
+========================================================= */
+
+.portal-cards {
+  width: min(100%, 900px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.portal-card {
+  border: none;
+  background: white;
+  border-radius: 15px;
+  padding: 28px;
+  text-align: left;
+  display: flex;
+  gap: 18px;
+  cursor: pointer;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+}
+
+.portal-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.portal-icon {
+  width: 68px;
+  height: 68px;
+  min-width: 68px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.government-icon {
+  background: #e9efff;
+  color: #2d5fc7;
+}
+
+.startup-icon {
+  background: #edf8df;
+  color: #548a1f;
+}
+
+.portal-label {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #2d5fc7;
+}
+
+.portal-card h2 {
+  margin: 7px 0;
+  font-size: 21px;
+  color: #172033;
+}
+
+.portal-card p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #64748b;
+  margin-bottom: 14px;
+}
+
+.portal-card strong {
+  font-size: 11px;
+  color: #2d5fc7;
+}
+
+.back-home {
+  margin-top: 25px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.back-home:hover {
+  color: #2d5fc7;
+}
+
+
+/* =========================================================
+   OLD / LEGACY DASHBOARD
+========================================================= */
+
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #172033;
+  padding: 40px 7vw;
+  position: relative;
+}
+
+.dashboard-header {
+  margin-bottom: 28px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #e8efff;
+  color: #2d5fc7;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.dashboard-header h1 {
+  margin-top: 11px;
+  font-size: 36px;
+}
+
+.dashboard-header p {
+  margin-top: 7px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   DASHBOARD STATS
+========================================================= */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 13px;
+  padding: 20px;
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card span {
+  display: block;
+  color: #64748b;
+  font-size: 11px;
+  margin-bottom: 7px;
+}
+
+.stat-card strong {
+  font-size: 29px;
+  color: #2d5fc7;
+}
+
+
+/* =========================================================
+   OPPORTUNITIES
+========================================================= */
+
+.opportunities h2 {
+  margin-bottom: 18px;
+  font-size: 23px;
+}
+
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.opportunity-card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.match {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background: #e9f7e8;
+  color: #338a3e;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+.opportunity-card h3 {
+  margin: 12px 0 7px;
+  font-size: 18px;
+}
+
+.opportunity-card p {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.opportunity-card button {
+  border: none;
+  background: #2d5fc7;
+  color: white;
+  padding: 9px 14px;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.opportunity-card button:hover {
+  background: #214da9;
+}
+
+
+/* =========================================================
+   DASHBOARD BACK BUTTON
+========================================================= */
+
+.dashboard-back {
+  margin-top: 25px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.dashboard-back:hover {
+  color: #2d5fc7;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+  .gov-content {
+    grid-template-columns: 1fr 0.9fr;
+    gap: 25px;
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .gov-intro h1 {
+    font-size: 45px;
+  }
+
+  .gov-intro p {
+    font-size: 14px;
+  }
+
+  .login-box {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .dashboard {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .opportunity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   SHORT DESKTOP SCREEN
+========================================================= */
+
+@media (max-height: 800px) and (min-width: 801px) {
+  .gov-topbar {
+    height: 58px;
+    min-height: 58px;
+  }
+
+  .gov-brand strong {
+    font-size: 27px;
+  }
+
+  .gov-brand span {
+    font-size: 10px;
+  }
+
+  .gov-content {
+    padding-top: 2px;
+    padding-bottom: 3px;
+  }
+
+  .login-box {
+    padding-top: 12px;
+    padding-bottom: 10px;
+    max-height: calc(100vh - 70px);
+  }
+
+  .login-header h2 {
+    font-size: 19px;
+  }
+
+  .login-title {
+    margin-bottom: 7px;
+  }
+
+  .login-title h1 {
+    font-size: 27px;
+  }
+
+  .form-group {
+    margin-bottom: 5px;
+  }
+
+  .form-group label,
+  .captcha-section > label {
+    margin-bottom: 4px;
+  }
+
+  .form-group input,
+  .captcha-input {
+    height: 35px;
+  }
+
+  .password-hint {
+    margin-bottom: 4px;
+  }
+
+  .captcha-image,
+  .captcha-refresh {
+    height: 37px;
+  }
+
+  .captcha-refresh {
+    font-size: 21px;
+  }
+
+  .captcha-char {
+    font-size: 22px;
+  }
+
+  .login-options {
+    margin-top: 4px;
+    margin-bottom: 6px;
+  }
+
+  .login-btn {
+    height: 36px;
+  }
+
+  .create-account {
+    margin-top: 5px;
+  }
+
+  .login-footer {
+    margin-top: 4px;
+  }
+
+  .register-box {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .register-box .login-title {
+    margin-bottom: 4px;
+  }
+
+  .register-box .form-group {
+    margin-bottom: 3px;
+  }
+
+  .register-box .form-group input {
+    height: 31px;
+  }
+
+  .register-box .captcha-image,
+  .register-box .captcha-refresh {
+    height: 33px;
+  }
+
+  .register-box .login-btn {
+    height: 33px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE — 800px
+========================================================= */
+
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .gov-home {
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+  }
+
+  /* Hide decorative desktop shapes */
+  .orange-shape {
+    width: 420px;
+    height: 420px;
+    right: -220px;
+    top: -180px;
+  }
+
+  .green-shape {
+    width: 300px;
+    height: 300px;
+    right: -180px;
+    bottom: -200px;
+  }
+
+  .white-curve {
+    width: 350px;
+    height: 350px;
+    right: -220px;
+    top: 250px;
+  }
+
+  .gov-topbar {
+    height: 75px;
+    min-height: 75px;
+    padding: 10px 16px;
+  }
+
+  .gov-brand strong {
+    font-size: 28px;
+  }
+
+  .gov-brand span {
+    font-size: 10px;
+  }
+
+  .gov-content {
+    grid-template-columns: 1fr;
+    padding: 25px 18px 30px;
+    gap: 25px;
+  }
+
+  .gov-intro {
+    display: none;
+  }
+
+  .login-box {
+    width: min(100%, 470px);
+    max-height: none;
+    padding: 20px 22px 16px;
+  }
+
+  .register-box {
+    max-height: none;
+  }
+
+  .gov-footer {
+    height: 45px;
+    min-height: 45px;
+    padding: 0 18px;
+    font-size: 8px;
+    gap: 10px;
+  }
+
+  .gov-footer span:last-child {
+    text-align: right;
+  }
+
+  /* Portal */
+  .portal-selection {
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+  }
+
+  .selection-header {
+    height: 65px;
+    min-height: 65px;
+    font-size: 23px;
+  }
+
+  .selection-content {
+    justify-content: flex-start;
+    padding: 45px 20px 35px;
+  }
+
+  .selection-content h1 {
+    font-size: 40px;
+  }
+
+  .selection-content > p {
+    max-width: 600px;
+    line-height: 1.5;
+  }
+
+  .portal-cards {
+    grid-template-columns: 1fr;
+    width: min(100%, 520px);
+    gap: 16px;
+  }
+
+  .portal-card {
+    padding: 22px;
+  }
+
+  /* Legacy dashboard */
+  .dashboard {
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+    padding: 30px 20px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 32px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .opportunity-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET / LARGE PHONE
+========================================================= */
+
+@media (max-width: 650px) {
+  .selection-content h1 {
+    font-size: 36px;
+  }
+
+  .selection-content > p {
+    font-size: 13px;
+  }
+
+  .portal-card {
+    gap: 14px;
+  }
+
+  .portal-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    font-size: 23px;
+  }
+
+  .dashboard {
+    padding: 25px 16px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 29px;
+  }
+
+  .dashboard-header p {
+    font-size: 13px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .stat-card strong {
+    font-size: 25px;
+  }
+
+  .opportunity-card {
+    padding: 18px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE — 500px
+========================================================= */
+
+@media (max-width: 500px) {
+  .gov-brand strong {
+    font-size: 26px;
+  }
+
+  .gov-brand span {
+    font-size: 9px;
+  }
+
+  .gov-content {
+    padding: 20px 12px 25px;
+  }
+
+  .login-box {
+    padding: 18px 17px 15px;
+    border-radius: 15px;
+  }
+
+  .login-header h2 {
+    font-size: 20px;
+  }
+
+  .login-title h1 {
+    font-size: 29px;
+  }
+
+  .login-title p {
+    font-size: 10px;
+  }
+
+  .form-group label,
+  .captcha-section > label {
+    font-size: 12px;
+  }
+
+  .form-group input,
+  .captcha-input {
+    height: 41px;
+    font-size: 13px;
+  }
+
+  .captcha-image {
+    height: 42px;
+  }
+
+  .captcha-refresh {
+    width: 42px;
+    height: 42px;
+  }
+
+  .captcha-char {
+    font-size: 23px;
+  }
+
+  .login-options {
+    font-size: 9px;
+  }
+
+  .forgot-btn {
+    font-size: 9px;
+  }
+
+  .login-btn {
+    height: 42px;
+    font-size: 13px;
+  }
+
+  .create-account {
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 9px;
+  }
+
+  .create-account-btn {
+    font-size: 9px;
+  }
+
+  .gov-footer {
+    height: auto;
+    min-height: 45px;
+    padding: 10px 12px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+  }
+
+  .gov-footer span:last-child {
+    text-align: center;
+  }
+
+  /* Portal */
+  .selection-header {
+    font-size: 21px;
+  }
+
+  .selection-content {
+    padding: 35px 14px 25px;
+  }
+
+  .selection-tag {
+    font-size: 9px;
+  }
+
+  .selection-content h1 {
+    font-size: 32px;
+  }
+
+  .selection-content > p {
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
+
+  .portal-card {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .portal-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 11px;
+    font-size: 20px;
+  }
+
+  .portal-card h2 {
+    font-size: 18px;
+  }
+
+  .portal-card p {
+    font-size: 11px;
+  }
+
+  .portal-card strong {
+    font-size: 10px;
+  }
+
+  /* Dashboard */
+  .dashboard {
+    padding: 22px 13px;
+  }
+
+  .dashboard-header {
+    margin-bottom: 20px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 27px;
+  }
+
+  .dashboard-header p {
+    font-size: 12px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 17px;
+  }
+
+  .stat-card strong {
+    font-size: 27px;
+  }
+
+  .opportunities h2 {
+    font-size: 20px;
+  }
+
+  .opportunity-card {
+    padding: 17px;
+  }
+
+  .opportunity-card h3 {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES — 380px
+========================================================= */
+
+@media (max-width: 380px) {
+  .gov-topbar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .gov-brand strong {
+    font-size: 23px;
+  }
+
+  .gov-brand span {
+    font-size: 8px;
+  }
+
+  .gov-content {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .login-box {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .login-title h1 {
+    font-size: 26px;
+  }
+
+  .captcha-row {
+    gap: 5px;
+  }
+
+  .captcha-refresh {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
+
+  .captcha-image {
+    height: 38px;
+  }
+
+  .captcha-char {
+    font-size: 20px;
+  }
+
+  .selection-content h1 {
+    font-size: 29px;
+  }
+
+  .portal-card {
+    padding: 15px;
+  }
+
+  .portal-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    font-size: 18px;
+  }
+
+  .dashboard {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  .portal-card:hover {
+    transform: none;
+  }
+
+  .login-btn:hover {
+    transform: none;
+  }
+
+  .captcha-refresh:hover {
+    transform: none;
+  }
+
+  .opportunity-card button:hover {
+    background: #2d5fc7;
+  }
+
+  .login-btn,
+  .captcha-refresh,
+  .portal-card,
+  .opportunity-card button,
+  .forgot-btn,
+  .create-account-btn,
+  .back-home,
+  .dashboard-back {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+
+/* =========================================================
+   FINAL SCROLL SAFETY
+========================================================= */
+
+html {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  overflow: visible;
+}
+
+
+/* =========================================================
+   MOBILE WIDTH SAFETY
+========================================================= */
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+table {
+  max-width: 100%;
+}
+
+input,
+textarea,
+select {
+  max-width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+/* =========================================================
+   MOBILE TABLE SAFETY
+========================================================= */
+
+@media (max-width: 800px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

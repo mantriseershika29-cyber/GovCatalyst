@@ -1,0 +1,272 @@
+/* =========================================================
+   GOVCATALYST LANGUAGE SELECTOR
+   GOVERNMENT PORTAL STYLE
+   ========================================================= */
+
+.language-selector {
+  position: relative;
+
+  z-index: 200;
+}
+
+
+/* =========================================================
+   LANGUAGE BUTTON
+   ========================================================= */
+
+.language-selector-button {
+  min-width: 105px;
+  height: 36px;
+
+  padding:
+    0
+    13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #f47721;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease;
+}
+
+.language-selector-button:hover {
+  background: #e76610;
+}
+
+.language-selector-button strong {
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   LANGUAGE DROPDOWN
+   ========================================================= */
+
+.language-dropdown {
+  position: absolute;
+
+  top: 47px;
+
+  right: -365px;
+
+  width: 465px;
+
+  padding:
+    13px
+    12px;
+
+  background: white;
+
+  border-radius: 10px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 8px 28px rgba(20, 40, 65, 0.18);
+
+  border: 1px solid #ededed;
+
+  animation:
+    languageDropdownIn
+    0.16s
+    ease-out;
+}
+
+
+/* LITTLE ARROW */
+
+.language-dropdown::before {
+  content: "";
+
+  position: absolute;
+
+  top: -7px;
+
+  left: 78px;
+
+  width: 14px;
+  height: 14px;
+
+  background: white;
+
+  border-left: 1px solid #ededed;
+  border-top: 1px solid #ededed;
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   LANGUAGE GRID
+   ========================================================= */
+
+.language-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  column-gap: 6px;
+
+  row-gap: 2px;
+}
+
+
+/* =========================================================
+   LANGUAGE OPTION
+   ========================================================= */
+
+.language-option {
+  min-height: 34px;
+
+  padding:
+    4px
+    7px;
+
+  border: none;
+
+  background: transparent;
+
+  border-radius: 4px;
+
+  color: #354b65;
+
+  text-align: left;
+
+  font-family:
+    Arial,
+    "Noto Sans",
+    sans-serif;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.language-option:hover {
+  background: #fff1e8;
+
+  color: #ed6f1b;
+}
+
+.language-option.selected {
+  color: #e96714;
+
+  font-weight: 700;
+
+  background: #fff4ed;
+}
+
+
+/* =========================================================
+   OPEN ANIMATION
+   ========================================================= */
+
+@keyframes languageDropdownIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .language-dropdown {
+    right: -250px;
+
+    width: 430px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .language-selector-button {
+    min-width: 90px;
+
+    height: 34px;
+
+    font-size: 11px;
+  }
+
+  .language-dropdown {
+    position: fixed;
+
+    top: 62px;
+
+    left: 50%;
+
+    right: auto;
+
+    width: calc(100vw - 24px);
+
+    max-width: 470px;
+
+    transform:
+      translateX(-50%);
+  }
+
+  .language-dropdown::before {
+    left: auto;
+
+    right: 55px;
+  }
+
+  .language-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    row-gap: 2px;
+  }
+
+  .language-option {
+    font-size: 12px;
+
+    min-height: 35px;
+  }
+
+}
